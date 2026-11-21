@@ -37,7 +37,7 @@ project-folder/ <br>
 > [View python script](def_function.py)
   On some systems you may need to use  python3 quiz.py  instead.
 
-#####How It Works
+#### How It Works
  
 1. Questions
  
@@ -116,7 +116,7 @@ project-folder/ <br>
 - Your progress is not saved if you exit mid-quiz
 - Both questions AND answer choices are in different positions every time you play
 
-##Functions
+## Functions
 
 | Function | Purpose | Called when |
 |----------|---------|-------------|
@@ -127,7 +127,7 @@ project-folder/ <br>
 | show_result() | Displays score, percentage, message, and review | After question 10 |
 | shuffle_choices() | Mixes up A–D options while keeping track of the correct answer | When starting the quiz |
  
-##Author
+### Author
  
 Name: Sheannen Gleih E. Alerta<br>
 Course/Year/Section: INFOTECH SE - 3A<br>
