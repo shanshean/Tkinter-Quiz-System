@@ -17,10 +17,10 @@ Python Knowledge Quiz is a desktop quiz application built with Python and Tkinte
 
 ## 📂 Files Included
 
-project-folder/ 
-├── quiz.py           # Main Python quiz program
-├── high_score.txt    # Auto-created file to store high score
-└── README.md         # This file
+project-folder/ <br>
+├── quiz.py           # Main Python quiz program<br>
+├── high_score.txt    # Auto-created file to store high score<br>
+└── README.md         # This file<br>
 
 ## How to Run
 
@@ -41,17 +41,17 @@ project-folder/
  
 1. Questions
  
-- Storage: All 10 questions are stored in a list of dictionaries. Each dictionary contains three parts: the question text, a list of four answer choices labeled A–D, and a single letter that represents the correct answer.
+- Storage: All 10 questions are stored in a list of dictionaries. <br>Each dictionary contains three parts: <br>the question text, <br>a list of four answer choices labeled A–D,<br> and a single letter that represents the correct answer.
 ​
-- Shuffling the order: When the quiz starts,  random.sample()  creates a new random order of the questions without removing any. This means every game starts with a different question first.
+- Shuffling the order: When the quiz starts,  random.sample()  creates a new random<br> order of the questions without removing any. This means every game <br>starts with a different question first.
 ​
-- Shuffling the choices: The  shuffle_choices()  function takes each question, removes the A/B/C/D labels from the choices, mixes the texts randomly, reassigns new A/B/C/D labels, and keeps track of where the correct answer moved to. This ensures the correct answer is never always in the same position.
+- Shuffling the choices: The  shuffle_choices()  function takes each question,<br> removes the A/B/C/D labels from the choices, mixes the texts randomly, <br>reassigns new A/B/C/D labels, and keeps track of where the correct<br> answer moved to. This ensures the correct answer is never always in the same position.
  
 2. Timer
  
-- Counting down: When a question is displayed, the timer starts at 15 seconds. The  update_timer()  function shows the remaining time on the screen, subtracts 1 second every 1,000 milliseconds using  root.after() , and calls itself again. It repeats until time reaches 0.
+- Counting down: When a question is displayed, the timer starts at 15 seconds. <br>The  update_timer()  function shows the remaining time on the screen, <br>subtracts 1 second every 1,000 milliseconds using  root.after() , <br>and calls itself again. It repeats until time reaches 0.
 ​
-- Stopping: When you click SUBMIT, the  stop_timer()  function cancels the scheduled countdown so the number stops decreasing. An  answered  flag is also set to  True  so the timer function knows to exit early.
+- Stopping: When you click SUBMIT, the  stop_timer()  function cancels the scheduled countdown<br> so the number stops decreasing. An  answered  flag is also set to  True  <br>so the timer function knows to exit early.
 ​
 - Time's up: If the timer reaches 0 before you submit, the quiz automatically ends and shows a "Time's up" message.
  
@@ -61,17 +61,17 @@ project-folder/
 ​
 - When you click SUBMIT, the program reads which letter you selected using  selected_answer.get() .
 ​
-- It compares your selected letter against the question's stored answer value. If they match, your score increases by 1. If they don't match, your answer and the correct answer are saved to a list so you can review them at the end.
+- It compares your selected letter against the question's stored answer value.<br> If they match, your score increases by 1. If they don't match,<br> your answer and the correct answer are saved to a list so you can review them at the end.
  
 Score and Percentage
  
-- Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer. The  answered  flag prevents the score from being increased multiple times for the same question.
+- Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer.<br> The  answered  flag prevents the score from being increased multiple times<br> for the same question.
 ​
-- Percentage: Calculated at the end by dividing your final score by the total number of questions, then multiplying by 100:  (score / total) × 100 . The result is displayed with one decimal place.
+- Percentage: Calculated at the end by dividing your final score by the total number of questions, <br>then multiplying by 100:  (score / total) × 100 . The result is displayed<br> with one decimal place.
  
 High Score
  
-- Reading: When the program starts,  get_high_score()  checks if a file named  high_score.txt  exists. If it does, it reads the number stored inside and displays it on the welcome screen. If the file doesn't exist or is empty, it shows 0 as the default high score.
+- Reading: When the program starts,  get_high_score()  checks if a file named <br> high_score.txt  exists. If it does, it reads the number stored inside and<br> displays it on the welcome screen. If the file doesn't exist or is empty, it <br>shows 0 as the default high score.
 ​
 - Saving: When you finish a quiz,  save_high_score()  compares your score<br> to the previously saved high score. Only if your new score<br> is higher does it overwrite the file with your new score. If it's equal <br>or lower, the file stays unchanged.
 ​
@@ -116,7 +116,7 @@ High Score
 - Your progress is not saved if you exit mid-quiz
 - Both questions AND answer choices are in different positions every time you play
 
-#Functions
+##Functions
 
 | Function | Purpose | Called when |
 |----------|---------|-------------|
@@ -127,7 +127,7 @@ High Score
 | show_result() | Displays score, percentage, message, and review | After question 10 |
 | shuffle_choices() | Mixes up A–D options while keeping track of the correct answer | When starting the quiz |
  
-#Author
+###Author
  
 Name: Sheannen Gleih E. Alerta<br>
 Course/Year/Section: INFOTECH SE - 3A<br>
