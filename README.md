@@ -15,16 +15,16 @@ Python Knowledge Quiz is a desktop quiz application built with Python and Tkinte
 - Friendly Messages — Sweet encouragement throughout the game
 - Play Again / Exit — Easy restart or close options
 
-# Files Included
+## Files Included
 
 project-folder/ <br>
 ├── quiz.py           # Main Python quiz program<br>
 ├── high_score.txt    # Auto-created file to store high score<br>
 └── README.md         # This file<br>
 
-# How to Run
+## How to Run
 
-### Requirements
+## Requirements
 - Python 3.x installed on your computer
 - Tkinter (usually comes pre-installed with Python)
 
@@ -37,7 +37,7 @@ project-folder/ <br>
 > [View python script](def_function.py)
   On some systems you may need to use  python3 quiz.py  instead.
 
-#How It Works
+#####How It Works
  
 1. Questions
  
@@ -79,7 +79,7 @@ project-folder/ <br>
 ​
 - Proof: After achieving a high score, closing the program completely and reopening <br> it shows the same high score on the start screen — confirming the data was <br> saved correctly to the external file.
  
-# How to Play
+## How to Play
  
 1. Enter your name and click CONTINUE <br>
 2. Read the instructions on the start screen, then click START QUIZ <br>
@@ -90,7 +90,7 @@ project-folder/ <br>
 7. At the end, view your score, percentage, and review any wrong answers <br>
 8. Choose PLAY AGAIN (questions and choices reshuffle automatically) or EXIT <br>
  
-# Topics
+## Topics
  
 - Functions ( def  keyword) 
 - Python file extension ( .py ) 
@@ -103,12 +103,12 @@ project-folder/ <br>
 - Importing modules 
 - What Python is 
  
-# How Shuffling Works
+## How Shuffling Works
  
 - Questions:  random.sample()  shuffles the order of the 10 questions each game
 - Answer Choices: The  shuffle_choices()  function mixes up A/B/C/D options <br> while keeping track of the correct answer — so you can't memorize the letter position!
  
-# Important Notes
+## Important Notes
  
 - The  high_score.txt  file is automatically created when you get a new high score
 - Sound effects work on Windows only — they won't cause errors on other systems
