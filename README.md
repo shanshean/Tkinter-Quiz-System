@@ -15,14 +15,14 @@ Python Knowledge Quiz is a desktop quiz application built with Python and Tkinte
 - Friendly Messages — Sweet encouragement throughout the game
 - Play Again / Exit — Easy restart or close options
 
-## 📂 Files Included
+# Files Included
 
 project-folder/ <br>
 ├── quiz.py           # Main Python quiz program<br>
 ├── high_score.txt    # Auto-created file to store high score<br>
 └── README.md         # This file<br>
 
-## How to Run
+# How to Run
 
 ### Requirements
 - Python 3.x installed on your computer
@@ -63,13 +63,13 @@ project-folder/ <br>
 ​
 - It compares your selected letter against the question's stored answer value.<br> If they match, your score increases by 1. If they don't match,<br> your answer and the correct answer are saved to a list so you can review them at the end.
  
-Score and Percentage
+4. Score and Percentage
  
 - Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer.<br> The  answered  flag prevents the score from being increased multiple times<br> for the same question.
 ​
 - Percentage: Calculated at the end by dividing your final score by the total number of questions, <br>then multiplying by 100:  (score / total) × 100 . The result is displayed<br> with one decimal place.
  
-High Score
+5. High Score
  
 - Reading: When the program starts,  get_high_score()  checks if a file named <br> high_score.txt  exists. If it does, it reads the number stored inside and<br> displays it on the welcome screen. If the file doesn't exist or is empty, it <br>shows 0 as the default high score.
 ​
