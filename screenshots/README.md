@@ -1,7 +1,0 @@
-![](screenshots/askname.png)
-![](screenshots/start.png)
-![](screenshots/question.png)
-![](screenshots/feedback1.png)
-![](screenshots/feedback2.png)
-![](screenshots/results.png)
-![](screenshots/high_score.png)
