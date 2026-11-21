@@ -27,24 +27,66 @@ plaintext
 
 ## How to Run
 
+
+
 ### Requirements
 - Python 3.x installed on your computer
 - Tkinter (usually comes pre-installed with Python)
 
 ### Step-by-Step
-1. Copy the code into a file named `quiz.py`
-2. Open Command Prompt (Windows) or Terminal (Mac/Linux)
-3. Navigate to where your file is saved:
-- cd path/to/your/folder
-4. Run the program:
+- 1. Copy the code into a file named `quiz.py`
+- 2. Open Command Prompt (Windows) or Terminal (Mac/Linux)
+- 3. Navigate to where your file is saved:
+-- cd path/to/your/folder
+- 4. Run the program:
  
-```bash  
-python quiz.py
- 
+> [View python script](def_function.py)
+ >- On some systems you may need to use  python3 quiz.py  instead.
+
+#How It Works
  
-💡 On some systems you may need to use  python3 quiz.py  instead.
+1. Questions — How They Are Stored and Shuffled
  
-📋 How to Play
+- Storage: All 10 questions are stored in a list of dictionaries. Each dictionary contains three parts: the question text, a list of four answer choices labeled A–D, and a single letter that represents the correct answer.
+​
+- Shuffling the order: When the quiz starts,  random.sample()  creates a new random order of the questions without removing any. This means every game starts with a different question first.
+​
+- Shuffling the choices: The  shuffle_choices()  function takes each question, removes the A/B/C/D labels from the choices, mixes the texts randomly, reassigns new A/B/C/D labels, and keeps track of where the correct answer moved to. This ensures the correct answer is never always in the same position.
+ 
+⏱️ Timer — How It Counts Down and Stops
+ 
+- Counting down: When a question is displayed, the timer starts at 15 seconds. The  update_timer()  function shows the remaining time on the screen, subtracts 1 second every 1,000 milliseconds using  root.after() , and calls itself again. It repeats until time reaches 0.
+​
+- Stopping: When you click SUBMIT, the  stop_timer()  function cancels the scheduled countdown so the number stops decreasing. An  answered  flag is also set to  True  so the timer function knows to exit early.
+​
+- Time's up: If the timer reaches 0 before you submit, the quiz automatically ends and shows a "Time's up" message.
+ 
+✅ Correct Answer — How the Program Identifies and Checks It
+ 
+- Each question stores the correct answer as a single letter, such as  "B" .
+​
+- When you click SUBMIT, the program reads which letter you selected using  selected_answer.get() .
+​
+- It compares your selected letter against the question's stored answer value. If they match, your score increases by 1. If they don't match, your answer and the correct answer are saved to a list so you can review them at the end.
+ 
+📊 Score and Percentage — How They Are Calculated
+ 
+- Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer. The  answered  flag prevents the score from being increased multiple times for the same question.
+​
+- Percentage: Calculated at the end by dividing your final score by the total number of questions, then multiplying by 100:  (score / total) × 100 . The result is displayed with one decimal place.
+ 
+🏆 High Score — How It Is Read, Saved, and Persisted
+ 
+- Reading: When the program starts,  get_high_score()  checks if a file named  high_score.txt  exists. If it does, it reads the number stored inside and displays it on the welcome screen. If the file doesn't exist or is empty, it shows 0 as the default high score.
+​
+- Saving: When you finish a quiz,  save_high_score()  compares your score to the previously saved high score. Only if your new score is higher does it overwrite the file with your new score. If it's equal or lower, the file stays unchanged.
+​
+- Persistence: Because the high score is stored in a separate text file, it remains on your computer even after you close the program. When you reopen the program later, it reads that same file again and shows your best score from before.
+​
+- Proof: After achieving a high score, closing the program completely and reopening it shows the same high score on the start screen — confirming the data was saved correctly to the external file. ✅
+
+ 
+# How to Play
  
 1. Enter your name and click CONTINUE
 2. Read the instructions on the start screen, then click ✨ START QUIZ ✨
@@ -55,7 +97,7 @@ python quiz.py
 7. At the end, view your score, percentage, and review any wrong answers
 8. Choose PLAY AGAIN (questions and choices reshuffle automatically) or EXIT
  
-🧠 Topics Covered
+# Topics Covered
  
 # Topic 
 1 Functions ( def  keyword) 
@@ -69,12 +111,12 @@ python quiz.py
 9 Importing modules 
 10 What Python is 
  
-💡 How Shuffling Works
+# How Shuffling Works
  
 - Questions:  random.sample()  shuffles the order of the 10 questions each game
 - Answer Choices: The  shuffle_choices()  function mixes up A/B/C/D options while keeping track of the correct answer — so you can't memorize the letter position! ✨
  
-⚠️ Important Notes
+# Important Notes
  
 - The  high_score.txt  file is automatically created when you get a new high score
 - Sound effects work on Windows only — they won't cause errors on other systems
@@ -83,6 +125,7 @@ python quiz.py
 - Both questions AND answer choices are in different positions every time you play
 
 #Functions
+
 | Function | Purpose | Called when |
 |----------|---------|-------------|
 | start_quiz() | Resets the variables and shuffles the questions | Start or Restart is clicked |
