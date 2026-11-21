@@ -1,12 +1,7 @@
-Here's the fully formatted, ready-to-copy README.md version! ✨
- 
- 
- 
-markdown  
-# 📖 Python Knowledge Quiz — README
+# Python Knowledge Quiz — README
 
 ## About the Project
-Python Knowledge Quiz is a desktop quiz application built with Python and Tkinter. It tests your basic Python knowledge through 10 carefully selected questions — with both question order AND answer choices shuffled randomly every time you play! 🎲✨ Complete with a countdown timer, score tracking, high score system, and a friendly interface.
+Python Knowledge Quiz is a desktop quiz application built with Python and Tkinter. It tests your basic Python knowledge through 10 carefully selected questions — with both question order AND answer choices shuffled randomly every time you play! Complete with a countdown timer, score tracking, high score system, and a friendly interface.
 
 ## Features
 - Player Name Entry — Personalized welcome screen
@@ -30,7 +25,7 @@ project-folder/
  
 plaintext  
 
-## 🚀 How to Run
+## How to Run
 
 ### Requirements
 - Python 3.x installed on your computer
@@ -40,13 +35,10 @@ plaintext
 1. Copy the code into a file named `quiz.py`
 2. Open Command Prompt (Windows) or Terminal (Mac/Linux)
 3. Navigate to where your file is saved:
-```bash
-cd path/to/your/folder'''
- 
- 
+- cd path/to/your/folder
 4. Run the program:
  
-bash  
+```bash  
 python quiz.py
  
  
