@@ -1,4 +1,4 @@
-! (screenshots/askname.png)
+![](screenshots/askname.png)
 !(screenshots/start.png)
 !(screenshots/question.png)
 !(screenshots/feedback1.png)
