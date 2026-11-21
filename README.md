@@ -1,4 +1,4 @@
-# Python Knowledge Quiz — README
+# Python Knowledge Quiz
 
 ## About the Project
 Python Knowledge Quiz is a desktop quiz application built with Python and Tkinter. It tests your basic Python knowledge through 10 carefully selected questions — with both question order AND answer choices shuffled randomly every time you play! Complete with a countdown timer, score tracking, high score system, and a friendly interface.
@@ -19,9 +19,9 @@ Python Knowledge Quiz is a desktop quiz application built with Python and Tkinte
  
  
 project-folder/
-├── quiz.py           # Main Python quiz program
-├── high_score.txt    # Auto-created file to store high score
-└── README.md         # This file
+├── quiz.py          - # Main Python quiz program<br>
+├── high_score.txt   - # Auto-created file to store high score<br>
+└── README.md        - # This file.<br>
  
 plaintext  
 
@@ -41,7 +41,7 @@ plaintext
 - 4. Run the program:
  
 > [View python script](def_function.py)
- >- On some systems you may need to use  python3 quiz.py  instead.
+  On some systems you may need to use  python3 quiz.py  instead.
 
 #How It Works
  
@@ -83,8 +83,7 @@ plaintext
 ​
 - Persistence: Because the high score is stored in a separate text file, it remains on your computer even after you close the program. When you reopen the program later, it reads that same file again and shows your best score from before.
 ​
-- Proof: After achieving a high score, closing the program completely and reopening it shows the same high score on the start screen — confirming the data was saved correctly to the external file. ✅
-
+- Proof: After achieving a high score, closing the program completely and reopening it shows the same high score on the start screen — confirming the data was saved correctly to the external file.
  
 # How to Play
  
@@ -100,21 +99,21 @@ plaintext
 # Topics Covered
  
 # Topic 
-1 Functions ( def  keyword) 
-2 Python file extension ( .py ) 
-3 Comments ( # ) 
-4 Output function ( print() ) 
-5 Boolean data type 
-6 Operator precedence 
-7 For loops 
-8  len()  function 
-9 Importing modules 
-10 What Python is 
+- Functions ( def  keyword) 
+- Python file extension ( .py ) 
+- Comments ( # ) 
+- Output function ( print() ) 
+- Boolean data type 
+- Operator precedence 
+- For loops 
+- len()  function 
+- Importing modules 
+- What Python is 
  
 # How Shuffling Works
  
 - Questions:  random.sample()  shuffles the order of the 10 questions each game
-- Answer Choices: The  shuffle_choices()  function mixes up A/B/C/D options while keeping track of the correct answer — so you can't memorize the letter position! ✨
+- Answer Choices: The  shuffle_choices()  function mixes up A/B/C/D options <br> while keeping track of the correct answer — so you can't memorize the letter position!
  
 # Important Notes
  
