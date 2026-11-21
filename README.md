@@ -39,7 +39,7 @@ project-folder/ <br>
 
 #### How It Works
  
-1. Questions
+####### 1. Questions
  
 - Storage: All 10 questions are stored in a list of dictionaries. <br>Each dictionary contains three parts: <br>the question text, <br>a list of four answer choices labeled A–D,<br> and a single letter that represents the correct answer.
 ​
@@ -47,7 +47,7 @@ project-folder/ <br>
 ​
 - Shuffling the choices: The  shuffle_choices()  function takes each question,<br> removes the A/B/C/D labels from the choices, mixes the texts randomly, <br>reassigns new A/B/C/D labels, and keeps track of where the correct<br> answer moved to. This ensures the correct answer is never always in the same position.
  
-2. Timer
+####### 2. Timer
  
 - Counting down: When a question is displayed, the timer starts at 15 seconds. <br>The  update_timer()  function shows the remaining time on the screen, <br>subtracts 1 second every 1,000 milliseconds using  root.after() , <br>and calls itself again. It repeats until time reaches 0.
 ​
@@ -55,7 +55,7 @@ project-folder/ <br>
 ​
 - Time's up: If the timer reaches 0 before you submit, the quiz automatically ends and shows a "Time's up" message.
  
-3. Correct Answer
+####### 3. Correct Answer
  
 - Each question stores the correct answer as a single letter, such as  "B" .
 ​
@@ -63,13 +63,13 @@ project-folder/ <br>
 ​
 - It compares your selected letter against the question's stored answer value.<br> If they match, your score increases by 1. If they don't match,<br> your answer and the correct answer are saved to a list so you can review them at the end.
  
-4. Score and Percentage
+####### 4. Score and Percentage
  
 - Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer.<br> The  answered  flag prevents the score from being increased multiple times<br> for the same question.
 ​
 - Percentage: Calculated at the end by dividing your final score by the total number of questions, <br>then multiplying by 100:  (score / total) × 100 . The result is displayed<br> with one decimal place.
  
-5. High Score
+####### 5. High Score
  
 - Reading: When the program starts,  get_high_score()  checks if a file named <br> high_score.txt  exists. If it does, it reads the number stored inside and<br> displays it on the welcome screen. If the file doesn't exist or is empty, it <br>shows 0 as the default high score.
 ​
