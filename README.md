@@ -1,7 +1,7 @@
 # Python Knowledge Quiz
 
 ## About the Project
-Python Knowledge Quiz is a desktop quiz application built with Python and Tkinter. It tests your basic Python knowledge through 10 carefully selected questions — with both question order AND answer choices shuffled randomly every time you play! Complete with a countdown timer, score tracking, high score system, and a friendly interface.
+Python Knowledge Quiz is a desktop quiz application built with Python and Tkinter. <br>It tests your basic Python knowledge through 10 carefully selected questions — with both question order AND answer choices shuffled randomly every time you play!<br> Complete with a countdown timer, score tracking, high score system, and a friendly interface.
 
 ## Features
 - Player Name Entry — Personalized welcome screen
@@ -16,18 +16,13 @@ Python Knowledge Quiz is a desktop quiz application built with Python and Tkinte
 - Play Again / Exit — Easy restart or close options
 
 ## 📂 Files Included
- 
- 
-project-folder/
-├── quiz.py          - # Main Python quiz program<br>
-├── high_score.txt   - # Auto-created file to store high score<br>
-└── README.md        - # This file.<br>
- 
-plaintext  
+
+project-folder/ 
+├── quiz.py           # Main Python quiz program
+├── high_score.txt    # Auto-created file to store high score
+└── README.md         # This file
 
 ## How to Run
-
-
 
 ### Requirements
 - Python 3.x installed on your computer
@@ -36,16 +31,15 @@ plaintext
 ### Step-by-Step
 - 1. Copy the code into a file named `quiz.py`
 - 2. Open Command Prompt (Windows) or Terminal (Mac/Linux)
-- 3. Navigate to where your file is saved:
--- cd path/to/your/folder
-- 4. Run the program:
+- 3. Navigate to where your file is saved: <br>cd path/to/your/folder
+- 4. Run the program:
  
 > [View python script](def_function.py)
   On some systems you may need to use  python3 quiz.py  instead.
 
 #How It Works
  
-1. Questions — How They Are Stored and Shuffled
+1. Questions
  
 - Storage: All 10 questions are stored in a list of dictionaries. Each dictionary contains three parts: the question text, a list of four answer choices labeled A–D, and a single letter that represents the correct answer.
 ​
@@ -53,7 +47,7 @@ plaintext
 ​
 - Shuffling the choices: The  shuffle_choices()  function takes each question, removes the A/B/C/D labels from the choices, mixes the texts randomly, reassigns new A/B/C/D labels, and keeps track of where the correct answer moved to. This ensures the correct answer is never always in the same position.
  
-⏱️ Timer — How It Counts Down and Stops
+2. Timer
  
 - Counting down: When a question is displayed, the timer starts at 15 seconds. The  update_timer()  function shows the remaining time on the screen, subtracts 1 second every 1,000 milliseconds using  root.after() , and calls itself again. It repeats until time reaches 0.
 ​
@@ -61,7 +55,7 @@ plaintext
 ​
 - Time's up: If the timer reaches 0 before you submit, the quiz automatically ends and shows a "Time's up" message.
  
-✅ Correct Answer — How the Program Identifies and Checks It
+3. Correct Answer
  
 - Each question stores the correct answer as a single letter, such as  "B" .
 ​
@@ -69,36 +63,35 @@ plaintext
 ​
 - It compares your selected letter against the question's stored answer value. If they match, your score increases by 1. If they don't match, your answer and the correct answer are saved to a list so you can review them at the end.
  
-📊 Score and Percentage — How They Are Calculated
+Score and Percentage
  
 - Score: Starts at 0. It increases by exactly 1 point each time you submit a correct answer. The  answered  flag prevents the score from being increased multiple times for the same question.
 ​
 - Percentage: Calculated at the end by dividing your final score by the total number of questions, then multiplying by 100:  (score / total) × 100 . The result is displayed with one decimal place.
  
-🏆 High Score — How It Is Read, Saved, and Persisted
+High Score
  
 - Reading: When the program starts,  get_high_score()  checks if a file named  high_score.txt  exists. If it does, it reads the number stored inside and displays it on the welcome screen. If the file doesn't exist or is empty, it shows 0 as the default high score.
 ​
-- Saving: When you finish a quiz,  save_high_score()  compares your score to the previously saved high score. Only if your new score is higher does it overwrite the file with your new score. If it's equal or lower, the file stays unchanged.
+- Saving: When you finish a quiz,  save_high_score()  compares your score<br> to the previously saved high score. Only if your new score<br> is higher does it overwrite the file with your new score. If it's equal <br>or lower, the file stays unchanged.
 ​
-- Persistence: Because the high score is stored in a separate text file, it remains on your computer even after you close the program. When you reopen the program later, it reads that same file again and shows your best score from before.
+- Persistence: Because the high score is stored in a separate text file, <br> it remains on your computer even after you close the program.<br> When you reopen the program later, it reads that same file again <br>and shows your best score from before.
 ​
-- Proof: After achieving a high score, closing the program completely and reopening it shows the same high score on the start screen — confirming the data was saved correctly to the external file.
+- Proof: After achieving a high score, closing the program completely and reopening <br> it shows the same high score on the start screen — confirming the data was <br> saved correctly to the external file.
  
 # How to Play
  
-1. Enter your name and click CONTINUE
-2. Read the instructions on the start screen, then click ✨ START QUIZ ✨
-3. Select the best answer for each question — options are shuffled every time!
-4. Click SUBMIT to lock in your answer — the timer stops
-5. Click CONTINUE for the next question
-6. If time runs out, you'll see a "Time's up" message and the quiz will end
-7. At the end, view your score, percentage, and review any wrong answers
-8. Choose PLAY AGAIN (questions and choices reshuffle automatically) or EXIT
+1. Enter your name and click CONTINUE <br>
+2. Read the instructions on the start screen, then click START QUIZ <br>
+3. Select the best answer for each question — options are shuffled every time! <br>
+4. Click SUBMIT to lock in your answer — the timer stops <br>
+5. Click CONTINUE for the next question <br>
+6. If time runs out, you'll see a "Time's up" message and the quiz will end <br>
+7. At the end, view your score, percentage, and review any wrong answers <br>
+8. Choose PLAY AGAIN (questions and choices reshuffle automatically) or EXIT <br>
  
-# Topics Covered
+# Topics
  
-# Topic 
 - Functions ( def  keyword) 
 - Python file extension ( .py ) 
 - Comments ( # ) 
